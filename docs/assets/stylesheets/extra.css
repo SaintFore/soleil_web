@@ -1,0 +1,36 @@
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* 美化引用块 */
+  .md-typeset blockquote {
+    border-left: 0.2rem solid var(--md-primary-color);
+    border-radius: 0.1rem;
+    background-color: var(--md-code-bg-color);
+    padding: 0.6rem 1rem;
+    margin-left: 0;
+  }
+  
+  /* 代码块圆角 */
+  .md-typeset pre > code {
+    border-radius: 0.4rem;
+  }
+  
+  /* 图片阴影和圆角 */
+  .md-typeset img {
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 表格美化 */
+  .md-typeset table:not([class]) {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem;
+  }
+  
+  /* 导航项悬停效果 */
+  .md-nav__item .md-nav__link:hover {
+    color: var(--md-accent-fg-color);
+    transition: color 0.2s;
+  }
