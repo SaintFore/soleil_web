@@ -97,11 +97,11 @@ plugins:
       cards_layout_options:
             background_color: "#ff1493"
             font_family: "Ma Shan Zheng"
-  - rss:
-      match_path: "blog/posts/*.md"
-      date_from_meta:
-        as_creation: data.created
-        as_updated: data.updated
+  # - rss:
+  #     match_path: "blog/posts/*.md"
+  #     date_from_meta:
+  #       as_creation: data.created
+  #       as_updated: data.updated
 
 hooks:
   - hooks/socialmedia.py
