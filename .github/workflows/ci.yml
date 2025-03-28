@@ -1,8 +1,8 @@
-name: ci
+name: ci 
 on:
   push:
     branches:
-      - master
+      - master 
       - main
 permissions:
   contents: write
@@ -11,49 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # 获取完整历史以支持最后修改日期功能
-      
-      - name: 配置Git凭据
+      - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      
-      - name: 设置Python环境
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-          cache: pip
-      
-      - name: 缓存MkDocs依赖
-        uses: actions/cache@v4
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ hashFiles('mkdocs.yml') }}-${{ github.sha }}
-          path: .cache
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache 
           restore-keys: |
-            mkdocs-material-${{ hashFiles('mkdocs.yml') }}-
             mkdocs-material-
-      
-      - name: 安装中文字体支持
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk
-          mkdir -p ~/.fonts
-          # 下载马善忠字体用于社交卡片生成
-          wget -q -O ~/.fonts/MaShanZheng-Regular.ttf https://github.com/google/fonts/raw/main/ofl/mashanzheng/MaShanZheng-Regular.ttf
-          fc-cache -fv
-      
-      - name: 安装依赖
-        run: |
-          pip install mkdocs-material
-          pip install pillow cairosvg       # 社交卡片生成依赖
-          pip install mkdocs-rss-plugin     # RSS插件
-          pip install mkdocs-git-revision-date-localized-plugin  # 日期本地化插件
-          pip install mkdocs-minify-plugin  # 页面压缩
-          pip install mkdocs-glightbox      # 图片浏览增强
-      
-      - name: 构建并部署
-        run: |
-          mkdocs gh-deploy --force
-        env:
-          PYTHONWARNINGS: 'ignore::UserWarning'  # 忽略不必要的警告
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
