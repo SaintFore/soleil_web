@@ -1,5 +1,5 @@
 site_name: Soleil
-site_url: https://docs.soleilshare.com
+site_url: https://soleil.sbs
 theme:
   name: material
   custom_dir: overrides
@@ -93,6 +93,8 @@ plugins:
   - meta
   - tags:
       tags_file: blog/tags.md
+  - glightbox:
+      width: 80%
   # - social:
   #     cards_layout_options:
   #           background_color: "#ff1493"

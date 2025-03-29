@@ -42,39 +42,13 @@ hide:
 
 </div>
 
-## ✨ 最新文章
-
-<div class="grid cards" markdown>
-
--   ![文章封面](https://source.unsplash.com/random/400x250/?tech){ .mdx-image .card-image loading=lazy }
-
-    ---
-    
-    ### PVE虚拟机搭建指南
-    
-    探索如何高效配置和管理虚拟化环境。
-    
-    [:octicons-arrow-right-24: 阅读更多](blog/posts/myfirst.md)
-
--   ![文章封面](https://source.unsplash.com/random/400x250/?code){ .mdx-image .card-image loading=lazy }
-
-    ---
-    
-    ### 待更新...
-    
-    更多精彩内容即将推出，敬请期待！
-    
-    [:octicons-arrow-right-24: 敬请期待](#)
-
-</div>
 
 <div class="hero" markdown>
 
-## 欢迎来到我的数字花园 🌱
+## 欢迎关注我的GitHub 🌱
 
 这里是我的知识管理中心，汇集了我的技术笔记、博客文章、项目展示和个人思考。
 
-[:material-account-voice: 联系我](#){ .md-button .md-button--primary }
 [:fontawesome-brands-github: GitHub](https://github.com/SaintFore){ .md-button }
 
 </div>
