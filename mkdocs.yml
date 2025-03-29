@@ -20,6 +20,12 @@ theme:
   favicon: assets/images/sun.ico
   icon:
     repo: fontawesome/brands/github
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css: fontawesome/brands/css3
+      python: fontawesome/brands/python
+      obsidian: simple/obsidian
   features:
     - navigation.footer
     - navigation.indexes   
@@ -27,13 +33,14 @@ theme:
     - navigation.instant.progress # 即时加载进度条,加载时显示
     - navigation.tracking     # 在URL中更新当前位置
     - navigation.tabs         # 顶部标签式导航
-    - navigation.sections     # 导航分节
-    - navigation.expand       # 自动展开导航
+    # - navigation.sections     # 导航分节
+    # - navigation.expand       # 自动展开导航
     - navigation.top          # 返回顶部按钮
     - toc.follow              # 目录跟随滚动
-    - toc.integrate          # 目录集成到侧边栏
+    # - toc.integrate          # 目录集成到侧边栏
     - search.suggest          # 搜索建议
     - search.highlight        # 搜索高亮
+    - header.autohide      # 随滚动隐藏标题栏
     - content.code.copy       # 代码块复制按钮
     - content.code.annotate   # 代码注释
     - content.tabs.link       # 标签页链接
@@ -58,6 +65,10 @@ theme:
       name: 切换到深色模式
   
 markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 2
+      title: "目录"
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -91,10 +102,22 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Obsidian:
+    - obsidian/Obsidian的再一次使用.md
+    - obsidian/Obsidian双向链接.md
+    - Obsidian的插件:
+      - obsidian/obsidian-extention/Calendar.md
+      - obsidian/obsidian-extention/DataView.md
+      - obsidian/obsidian-extention/Easy Typing.md
+      - obsidian/obsidian-extention/Excalidraw.md
+      - obsidian/obsidian-extention/Image auto upload.md
+      - obsidian/obsidian-extention/Kindle Highlights.md
+      - obsidian/obsidian-extention/Obsidian to Anki.md
+
   - Blog:
     - blog/index.md
-    - Tags: blog/tags.md
     
+  - Tags: blog/tags.md
 
 plugins:
   - search
@@ -126,8 +149,8 @@ plugins:
         - categories
         - tags
 
-hooks:
-  - hooks/socialmedia.py
+# hooks:
+  # - hooks/socialmedia.py
 
 extra:
   social:
@@ -140,7 +163,12 @@ extra:
   annotate:
     json: [.s2]               # 注解JSON字符串
   generator: false            # 移除"Made with Material"
-
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS3: css
+    Python: python
+    Obsidian: obsidian
 
 
 extra_css:

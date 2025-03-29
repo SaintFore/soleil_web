@@ -5,8 +5,8 @@ date:
 categories:
   - Blog
 tags:
-  - 硬件
-  - 装机
+  - HTML5
+  - CSS3
   - post
 authors:
   - Merlin
@@ -20,7 +20,6 @@ authors:
 
 这个主机会先看有没有风扇，开机后需要先按下 `enter` 键，才能正确开机。
 
-<!-- more -->
 
 ## 开始重装
 
