@@ -30,4 +30,5 @@ jobs:
           pip install mkdocs-glightbox
           pip install mkdocs-minify-plugin
           pip install mkdocs-rss-plugin
+          pip install "mkdocs-material[imaging]"
       - run: mkdocs gh-deploy --force
