@@ -5,14 +5,11 @@ date:
 categories:
   - Blog
 tags:
-  - first
-  - blog
+  - 硬件
+  - 装机
   - post
 authors:
   - Merlin
-links:
- - Homepage: index.md
- - Blog index: blog/index.md
 ---
 
 ## 硬件设备

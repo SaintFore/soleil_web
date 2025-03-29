@@ -1,13 +1,23 @@
+# 个人博客配置文件
 site_name: Soleil
 site_url: https://soleil.sbs
+site_author: Merlin
+site_description: 个人博客
+
+# github 仓库信息
+repo_name: SaintFore/soleil
+repo_url: https://github.com/SaintFore/soleil
+
+copyright: Copyright &copy; 2025 Merlin Soleil
+
 theme:
   name: material
   custom_dir: overrides
   font: 
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/sun.png
-  favicon: assets/sun.ico
+  logo: assets/images/sun.png
+  favicon: assets/images/sun.ico
   icon:
     repo: fontawesome/brands/github
   features:
@@ -95,6 +105,13 @@ plugins:
       tags_file: blog/tags.md
   - glightbox:
       width: 80%
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
   # - social:
   #     cards_layout_options:
   #           background_color: "#ff1493"
@@ -120,7 +137,7 @@ extra:
     json: [.s2]               # 注解JSON字符串
   generator: false            # 移除"Made with Material"
 
-copyright: Copyright &copy; 2025 Merlin Soleil
+
 
 extra_css:
   - assets/stylesheets/extra.css
