@@ -1,4 +1,5 @@
 ---
+title: CherryStudio 使用指南
 date:
   created: 2025-04-01
   updated: 2025-04-11
@@ -7,6 +8,7 @@ categories:
 authors:
   - Merlin
 ---
+# CherryStudio 使用指南
 # 为什么使用？
 
 CherryStudio 就相当于一个 AI 的合集，能够集合多模型对话，知识库管理，AI 绘画等各种功能的一个集合工具。
