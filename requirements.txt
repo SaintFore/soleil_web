@@ -1,0 +1,5 @@
+mkdocs-material
+mkdocs-glightbox
+mkdocs-minify-plugin
+mkdocs-rss-plugin
+"mkdocs-material[imaging]"
